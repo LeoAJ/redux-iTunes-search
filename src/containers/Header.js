@@ -5,6 +5,7 @@ import $ from 'jquery';
 import 'imports?$=jquery,jQuery=jquery!../../vendor/js/transition';
 import 'imports?$=jquery,jQuery=jquery!../../vendor/js/dropdown';
 
+@connect(null, actions)
 class Header extends Component {
 
   state = { media: 'all' };
@@ -62,4 +63,4 @@ class Header extends Component {
   }
 }
 
-export default connect(null, actions)(Header);
+export default Header;
