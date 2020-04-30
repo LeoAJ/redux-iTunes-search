@@ -8,7 +8,9 @@
     "dev": "babel-node server.js",
     "deploy": "npm run clean && npm run build",
     "lint": "eslint js/** webpack/**",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=4"
@@ -33,7 +35,8 @@
     "react-redux": "^4.4.5",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
-    "reqwest": "^2.0.5"
+    "reqwest": "^2.0.5",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
@@ -60,5 +63,6 @@
     "webpack": "^1.13.2",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.12.2"
-  }
+  },
+  "snyk": true
 }
